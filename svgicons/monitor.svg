@@ -1,0 +1,55 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -4 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="TV">
+      <path d="M28, 4L4, 4C2.9, 4 2, 4.9 2, 6L2, 22C2, 23.1 2.9, 24 4, 24L10, 24L10, 28L22, 28L22, 24L28, 24C29.1, 24 30, 23.1 30, 22L30, 6C30, 4.9 29.1, 4 28, 4zM28, 22L4, 22L4, 6L28, 6L28, 22z" fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="0" y="6" width="4" height="4" rx="0" ry="0" fill="#039C23" class="Green" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="6" y="12" width="4" height="4" rx="0" ry="0" fill="#1177D7" class="Blue" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="0" y="12" width="4" height="4" rx="0" ry="0" fill="#727272" class="Black" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="12" y="6" width="4" height="4" rx="0" ry="0" fill="#039C23" class="Green" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="12" y="12" width="4" height="4" rx="0" ry="0" fill="#D11C1C" class="Red" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <g class="st1">
+        <rect x="6" y="6" width="4" height="4" rx="0" ry="0" fill="#D11C1C" class="Red" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(6, 2)" style="enable-background:new 0 0 16 16">
+    <g id="Table">
+      <rect x="0" y="0" width="16" height="4" rx="0" ry="0" fill="#FFB115" class="Yellow" />
+    </g>
+  </g>
+</svg>

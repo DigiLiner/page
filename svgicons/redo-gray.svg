@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-2 -6.605 32 32"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="redo-gray.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="25.21875"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     transform="translate(-11.971, -16.5763)"
+     id="g3"
+     style="fill:#727272;fill-opacity:1">
+    <g
+       transform="matrix(0.202898532152176, 0, 0, 0.202898532152176, 0, 0)"
+       id="g2"
+       style="fill:#727272;fill-opacity:1">
+      <g
+         id="g1"
+         style="fill:#727272;fill-opacity:1">
+        <path
+           d="M13.865997, 0C17.570007, 0.0000001 21.053009, 1.7499998 23.67099, 4.9230035C24.899994, 6.4070119 25.855988, 8.126006 26.537994, 9.9909953L30.934998, 4.0270075L32, 20.673L18.665985, 20.673L23.264008, 14.436003C22.889008, 12.231993 21.997986, 10.203001 20.653992, 8.574004C18.841003, 6.376006 16.431, 5.1650079 13.865997, 5.1650079C11.302002, 5.1650079 8.8919983, 6.376006 7.0809937, 8.574004C5.2640076, 10.766996 4.2659912, 13.691007 4.2659912, 16.798002C4.2659912, 18.438991 4.553009, 20.019009 5.0830078, 21.479L0.5570068, 21.479C0.1950073, 19.976986 0, 18.402004 0, 16.798002C0, 12.311003 1.4440002, 8.0899953 4.0620117, 4.9230035C6.6789856, 1.7499998 10.158997, 0.0000001 13.865997, 0z"
+           fill="#000000"
+           id="path1"
+           transform="rotate(0, 128, 128) translate(59, 81.6859060525894) scale(4.3125)"
+           style="fill:#727272;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

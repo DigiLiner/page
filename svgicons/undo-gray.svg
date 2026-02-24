@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-2 -6.55 32 32"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="undo-gray.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="25.21875"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     transform="translate(-11.971, -16.521)"
+     id="g3"
+     style="fill:#727272;fill-opacity:1">
+    <g
+       transform="matrix(0.202898532152176, 0, 0, 0.202898532152176, 0, 0)"
+       id="g2"
+       style="fill:#727272;fill-opacity:1">
+      <g
+         id="g1"
+         style="fill:#727272;fill-opacity:1">
+        <path
+           d="M18.100006, 0C21.799988, 0.0000002 25.299988, 1.2999886 27.899994, 3.5999928C30.600006, 5.8999971 32, 9.0000046 32, 12.299993C32, 15.599998 30.600006, 18.700005 27.899994, 20.999995C27.5, 21.399989 26.899994, 21.600001 26.399994, 21.600001C25.899994, 21.600001 25.299988, 21.399989 24.899994, 20.999995C24.100006, 20.300013 24.100006, 19.099999 24.899994, 18.300011C26.699982, 16.700005 27.699982, 14.599998 27.699982, 12.299993C27.699982, 10.000005 26.699982, 7.899998 24.899994, 6.299991C23.100006, 4.6999992 20.699982, 3.7999898 18.100006, 3.7999898C15.5, 3.7999898 13.100006, 4.6999992 11.299988, 6.299991C10, 7.3999976 9.1000061, 8.8999985 8.6999817, 10.500006L13.299988, 15.099998L0, 15.099998L1.1000061, 2.8999954L5.5, 7.2999915C6.1999817, 5.8999971 7.1000061, 4.6999992 8.3999939, 3.5999928C10.899994, 1.2999886 14.399994, 0.0000002 18.100006, 0z"
+           fill="#000000"
+           id="path1"
+           transform="rotate(0, 128, 128) translate(59, 81.4249991774559) scale(4.3125)"
+           style="fill:#727272;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

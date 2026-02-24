@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2.0025 -2.0025 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs2831" tag="staticElement_id56558413">
+    <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" gradientunits="objectboundingbox" spreadmethod="pad" id="linearGradient3615">
+      <stop offset="0%" id="stop3617" style="stop-color:#eeeeec" />
+      <stop offset="69.58%" id="stop3619" style="stop-color:#babdb6" />
+      <stop offset="100%" id="stop3621" style="stop-color:#a1a59b" />
+    </linearGradient>
+    <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" gradientunits="objectboundingbox" spreadmethod="pad" id="linearGradient2782">
+      <stop offset="0%" id="stop2784" style="stop-color:#fff" />
+      <stop offset="100%" id="stop2786" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient x1="-11.448px" y1="10.344px" x2="-11.448px" y2="45.849px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.36755, 0, 0, 0.36638, 8.2056, -1.7938)" id="linearGradient3627" />
+    <linearGradient x1="10.44px" y1="9.9657px" x2="10.44px" y2="52.94px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.29583, 0, 0, 0.33661, 8.2499, -1.1702)" id="linearGradient3629" />
+    <linearGradient x1="-11.448px" y1="10.344px" x2="-11.448px" y2="45.849px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.36755, 0, 0, 0.36638, 16.206, -1.7938)" id="linearGradient3635" />
+    <linearGradient x1="10.44px" y1="9.9657px" x2="10.44px" y2="52.94px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.29583, 0, 0, 0.33661, 16.25, -1.1702)" id="linearGradient3637" />
+  </defs>
+  <g id="svg2829" transform="translate(-2.0025, -2.0025)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M1.5004, 1.5004L1.5004, 14.4994L6.4997, 14.4994L6.4997, 1.5004L1.5004, 1.5004z" fill="url(#linearGradient3627)" id="path3623" stroke="#888a86" stroke-width="1.0007px" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2829" transform="translate(-2.00249968299866, -2.00249996070862)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M2.5007, 2.5007L2.5007, 13.4997L5.499, 13.4843L5.499, 2.5013L2.5007, 2.5013z" fill="none" opacity="0.41" id="path3625" stroke="url(#linearGradient3629)" stroke-width="1.0013px" stroke-linecap="round" stroke-opacity="0.97255" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2829" transform="translate(-2.00250095367432, -2.0025)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M9.5004, 1.5004L9.5004, 14.4994L14.4997, 14.4994L14.4997, 1.5004L9.5004, 1.5004z" fill="url(#linearGradient3635)" id="path3631" stroke="#888a86" stroke-width="1.0007px" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2829" transform="translate(-2.00250053710937, -2.00249996070862)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M10.501, 2.5007L10.501, 13.4997L13.4993, 13.4843L13.4993, 2.5013L10.501, 2.5013z" fill="none" opacity="0.41" id="path3633" stroke="url(#linearGradient3637)" stroke-width="1.0013px" stroke-linecap="round" stroke-opacity="0.97255" />
+      </g>
+    </g>
+  </g>
+</svg>

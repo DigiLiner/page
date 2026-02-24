@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -12.6675 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Capa_1" transform="translate(0, -10.6686)" style="enable-background:new 0 0 42 42">
+    <g transform="matrix(0.875000715255737, 0, 0, 0.875000715255737, 0, 0)">
+      <g transform="matrix(1.1428, 0, 0, 1.1428, 0, 0)">
+        <g transform="matrix(0.6667, 0, 0, 0.6667, 0, 0)">
+          <path d="M37.059, 16L26, 16L16, 16L4.941, 16C2.224, 16 0, 18.282 0, 21C0, 23.718 2.224, 26 4.941, 26L16, 26L26, 26L37.059, 26C39.776, 26 42, 23.718 42, 21C42, 18.282 39.776, 16 37.059, 16z" fill="#727272" fill-opacity="1" class="Black" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs3684" tag="staticElement_id39418085">
+    <linearGradient x1="-35.217px" y1="1.4762px" x2="-35.217px" y2="41.689px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.27629, 0, 0, 0.28064, 15.479, 33.623)" id="linearGradient2847">
+      <stop offset="0%" id="stop2784" style="stop-color:#fff" />
+      <stop offset="100%" id="stop2786" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+    <radialGradient cx="21.979px" cy="5px" r="20px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0, 0.98895, -2.3715, 0, 20.179, 9.6485)" id="radialGradient3630">
+      <stop offset="0%" id="stop3244" style="stop-color:#f8b17e" />
+      <stop offset="26.238%" id="stop3246" style="stop-color:#e35d4f" />
+      <stop offset="66.094%" id="stop3248" style="stop-color:#c6262e" />
+      <stop offset="100%" id="stop3250" style="stop-color:#690b54" />
+    </radialGradient>
+    <linearGradient x1="-33.651px" y1="43.42px" x2="-33.651px" y2="-0.20339px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.30406, 0, 0, 0.30881, 16.194, 33.01)" id="linearGradient2852">
+      <stop offset="0%" id="stop2492" style="stop-color:#791235" />
+      <stop offset="100%" id="stop2494" style="stop-color:#dd3b27" />
+    </linearGradient>
+  </defs>
+  <g id="svg3682" transform="translate(-1.9996, -1.9996)">
+    <g transform="matrix(1.99963772296906, 0, 0, 1.99963772296906, 0, 0)">
+      <g id="layer1" transform="translate(-0.32127, -31.679)">
+        <rect x="1.8213" y="33.179" width="13" height="13" rx="0" ry="0" fill="url(#radialGradient3630)" id="rect3376" stroke="url(#linearGradient2852)" stroke-width="1.0003px" stroke-linejoin="round" />
+      </g>
+    </g>
+  </g>
+  <g id="svg3682" transform="translate(-1.99960015239716, -1.99960096721649)">
+    <g transform="matrix(1.99963772296906, 0, 0, 1.99963772296906, 0, 0)">
+      <g id="layer1" transform="translate(-0.32127, -31.679)">
+        <rect x="2.8316" y="34.189" width="10.979" height="10.979" rx="0" ry="0" fill="none" opacity="0.4" id="rect3404" stroke="url(#linearGradient2847)" stroke-width="1.0205px" />
+      </g>
+    </g>
+  </g>
+</svg>

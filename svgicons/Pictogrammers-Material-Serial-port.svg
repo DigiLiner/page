@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="mdi-serial-port"
+   viewBox="0 0 32 32"
+   version="1.1"
+   sodipodi:docname="Pictogrammers-Material-Serial-port.svg"
+   width="32"
+   height="32"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="15.291667"
+     inkscape:cx="7.2915531"
+     inkscape:cy="14.125341"
+     inkscape:window-width="1328"
+     inkscape:window-height="942"
+     inkscape:window-x="45"
+     inkscape:window-y="45"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="mdi-serial-port">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <path
+     d="m 9.266129,4 h 13.467742 v 2.6935484 h 2.693549 v 4.0403226 h -4.040323 v 8.080645 H 10.612904 V 10.733871 H 6.5725805 V 6.6935484 H 9.266129 V 4 m 13.467742,8.080645 h 2.693549 v 6.733871 h -2.693549 v -6.733871 m -8.080645,8.080645 h 2.693549 v 9.42742 H 14.653226 V 20.16129 M 6.5725805,12.080645 H 9.266129 v 6.733871 H 6.5725805 Z"
+     id="path1"
+     style="stroke-width:1.34677" />
+</svg>

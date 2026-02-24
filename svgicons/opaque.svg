@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -4.9165 32 31.999" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs2455" tag="staticElement_id27347504">
+    <radialGradient cx="605.71px" cy="486.65px" r="117.14px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.028917, 0, 0, 0.012353, 26.973, 38.471)" id="radialGradient19613" />
+    <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" gradientunits="objectboundingbox" spreadmethod="pad" id="linearGradient5060">
+      <stop offset="0%" id="stop5062" />
+      <stop offset="100%" id="stop5064" style="stop-opacity:0" />
+    </linearGradient>
+    <radialGradient cx="605.71px" cy="486.65px" r="117.14px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(-0.028917, 0, 0, 0.012353, 21.027, 38.471)" id="radialGradient19616" />
+    <linearGradient x1="302.86px" y1="366.65px" x2="302.86px" y2="609.51px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.084497, 0, 0, 0.012353, -6.5396, 38.471)" id="linearGradient19619">
+      <stop offset="0%" id="stop5050" style="stop-opacity:0" />
+      <stop offset="50%" id="stop5056" />
+      <stop offset="100%" id="stop5052" style="stop-opacity:0" />
+    </linearGradient>
+    <linearGradient x1="108.26px" y1="110.28px" x2="25.818px" y2="14.029px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.50664, 0, 0, 0.35125, -58.338, -49.086)" id="linearGradient2447">
+      <stop offset="0%" id="stop3802" style="stop-color:#fff" />
+      <stop offset="100%" id="stop3804" style="stop-color:#e0e0e0" />
+    </linearGradient>
+    <linearGradient x1="-24.032px" y1="-13.091px" x2="-24.098px" y2="-40.164px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(1.1143, 0, 0, 1.1111, 2.7514, 3.5103)" id="linearGradient2444">
+      <stop offset="0%" id="stop3796" style="stop-color:#333" />
+      <stop offset="100%" id="stop3798" style="stop-color:#292929" />
+    </linearGradient>
+    <linearGradient x1="28.938px" y1="17.333px" x2="105.37px" y2="92.824px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.49084, 0, 0, 0.38034, -57.357, -48.338)" id="linearGradient2442">
+      <stop offset="0%" id="stop3790" style="stop-color:#262626" />
+      <stop offset="100%" id="stop3792" style="stop-color:#828282" />
+    </linearGradient>
+  </defs>
+  <g id="svg2453" transform="translate(-3.33786010831005E-07, -4.66644214477539)">
+    <g transform="matrix(0.583333790302277, 0, 0, 0.583333790302277, 0, 0)">
+      <g id="layer1">
+        <g id="g3257" style="opacity:.4">
+          <rect x="3.6" y="43" width="40.8" height="3" rx="0" ry="0" fill="url(#linearGradient19619)" opacity="0.4" id="rect2879" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="svg2453" transform="translate(0, -4.66644296875)">
+    <g transform="matrix(0.583333790302277, 0, 0, 0.583333790302277, 0, 0)">
+      <g id="layer1">
+        <g id="g3257" style="opacity:.4">
+          <path d="M3.6, 43L3.6, 45.9998C2.1109, 46.0058 0, 45.3278 0, 44.4998C0, 43.6718 1.6618, 42.9998 3.6, 42.9998z" fill="Transparent" opacity="0.4" id="path2881" class="Transparent" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="svg2453" transform="translate(-2.28881835795391E-06, -4.66644296875)">
+    <g transform="matrix(0.583333790302277, 0, 0, 0.583333790302277, 0, 0)">
+      <g id="layer1">
+        <g id="g3257" style="opacity:.4">
+          <path d="M44.4, 43L44.4, 45.9998C45.8891, 46.0054 48, 45.32769 48, 44.4997C48, 43.6717 46.3382, 43 44.4, 43z" fill="Transparent" opacity="0.4" id="path2883" class="Transparent" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="svg2453" transform="translate(-2.47955322940641E-09, -4.6664433921814)">
+    <g transform="matrix(0.583333790302277, 0, 0, 0.583333790302277, 0, 0)">
+      <g id="layer1">
+        <rect x="-46.457" y="-44.503" width="44.966" height="35.922" rx="0" ry="0" fill="url(#linearGradient2447)" id="rect3580" transform="matrix(-1, 0.0017332, -0.00096053, -1, 0, 0)" stroke="#000000" stroke-linecap="round" stroke-opacity="0.96863" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2453" transform="translate(-2.93731689637866E-07, -4.66644345550537)">
+    <g transform="matrix(0.583333790302277, 0, 0, 0.583333790302277, 0, 0)">
+      <g id="layer1">
+        <rect x="-43.529" y="-41.517" width="38.927" height="29.854" rx="0" ry="0" fill="#727272" id="rect3582" class="Black" transform="matrix(-0.99999, 0.0037552, 0.0024409, -1, 0, 0)" stroke="Transparent" stroke-linecap="round" />
+      </g>
+    </g>
+  </g>
+</svg>

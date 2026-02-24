@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="PieChart">
+      <path d="M25.2, 5.4C22.7, 3.3 19.5, 2 16, 2C8.3, 2 2, 8.3 2, 16C2, 19.5 3.3, 22.7 5.4, 25.2L14.6, 16L25.2, 5.4z" fill="#D11C1C" class="Red" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="PieChart">
+      <path d="M16, 30C19.5, 30 22.7, 28.7 25.2, 26.6L16, 17.4L6.8, 26.6C9.3, 28.7 12.5, 30 16, 30z" fill="#FFB115" class="Yellow" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="PieChart">
+      <path d="M17.4, 16L26.6, 25.2C28.7, 22.7 30, 19.5 30, 16C30, 12.5 28.7, 9.3 26.6, 6.8L17.4, 16z" fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+</svg>
