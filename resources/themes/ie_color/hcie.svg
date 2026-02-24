@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" version="1.1" id="svg6" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" width="32px" height="32px">
+  <polygon style="stroke-linejoin: round; stroke-linecap: round; stroke-width: 20px; stroke: rgb(92, 92, 92); fill: rgb(130, 199, 255);" points="36.641 432.733 36.641 30.045 438.517 431.921 334.678 431.921 101.352 198.595 101.352 431.604" id="polygon1"/>
+  <g id="g3">
+    <rect x="17.931" y="332.543" width="456.122" height="132.543" style="stroke-miterlimit: 6; stroke-linejoin: round; stroke-width: 20px; stroke: rgb(92, 92, 92); fill: rgb(130, 199, 255);" id="rect1"/>
+    <line style="stroke-linecap: round; stroke-width: 20px; stroke: rgb(92, 92, 92); fill: rgb(130, 199, 255);" x1="400" y1="332.543" x2="400" y2="400" id="line1"/>
+    <line style="stroke-linecap: round; stroke-width: 20px; stroke: rgb(92, 92, 92); fill: rgb(130, 199, 255);" x1="300" y1="332.543" x2="300" y2="400" id="line2"/>
+    <line style="stroke-linecap: round; stroke-width: 20px; stroke: rgb(92, 92, 92); fill: rgb(130, 199, 255);" x1="200" y1="332.543" x2="200" y2="400" id="line3"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -14.232948, -1.818318)" id="g6">
+    <rect x="248.556" y="61.43" width="124.504" height="301.673" style="stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(92, 92, 92); fill: rgb(103, 219, 213);" transform="matrix(0.70478, 0.709425, -0.709425, 0.70478, 195.242203, -128.53299)" rx="1.014" ry="1.014" id="rect3"/>
+    <rect x="247.845" y="7.28" width="124.147" height="35.747" style="stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(92, 92, 92); fill: rgb(255, 238, 128);" rx="1.014" ry="1.014" transform="matrix(0.706433, 0.70778, -0.70778, 0.706433, 181.856705, -114.419266)" id="rect4"/>
+    <rect x="247.316" y="14.054" width="123.881" height="69.011" style="paint-order: fill; stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(92, 92, 92); fill: rgb(255, 136, 81);" rx="1.014" ry="1.014" transform="matrix(0.706433, 0.70778, -0.70778, 0.706433, 236.007309, -167.213318)" id="rect5"/>
+    <path d="M -161.129 -462.178 L -99.492 -345.179 L -222.767 -345.179 L -161.129 -462.178 Z" style="fill: rgb(249, 176, 113); stroke-width: 20px; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(92, 92, 92);" transform="matrix(-0.706736, -0.707478, 0.707478, -0.706736, 286.769257, -9.372437)" bx:shape="triangle -222.767 -462.178 123.275 116.999 0.5 0 1@051e2519" id="path5"/>
+    <path d="M 81.528533,422.12218 94.68699,384.83306 119.38442,411.7358 Z" style="fill:#5c5c5c;fill-opacity:1;stroke:#5c5c5c;stroke-width:2.64567;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" bx:shape="triangle -101.758 -215.528 56.312 54.559 0.5 0 1@b7468232" id="path6"/>
+  </g>
+  <polygon style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" points="133.354 143.16" id="polygon6"/>
+</svg>

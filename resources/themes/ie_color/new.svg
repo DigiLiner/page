@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-6 -4 32 32" version="1.1" id="svg4" xmlns="http://www.w3.org/2000/svg">
+  <g id="Layer_1" transform="translate(-6, -4)" style="enable-background:new 0 0 32 32">
+    <g id="New">
+      <g id="g1">
+        <path d="M19, 4L7, 4C6.4, 4 6, 4.4 6, 5L6, 27C6, 27.6 6.4, 28 7, 28L25, 28C25.6, 28 26, 27.6 26, 27L26, 11L19, 4zM24, 26L8, 26L8, 6L18, 6L18, 11C18, 11.6 18.4, 12 19, 12L24, 12L24, 26z" class="Black" id="path1" style="fill: rgb(17, 119, 215);"/>
+      </g>
+    </g>
+  </g>
+  <g id="g4" transform="translate(-6, -4)" style="enable-background:new 0 0 32 32">
+    <g id="g3">
+      <g id="g2">
+        <polygon style="stroke: rgb(0, 0, 0); fill: rgb(203, 203, 203);" points="7.528 5.026 18.598 4.899 25.002 11.048 24.96 27.08 7.231 27.123"/>
+        <path d="M19, 4L7, 4C6.4, 4 6, 4.4 6, 5L6, 27C6, 27.6 6.4, 28 7, 28L25, 28C25.6, 28 26, 27.6 26, 27L26, 11L19, 4zM24, 26L8, 26L8, 6L18, 6L18, 11C18, 11.6 18.4, 12 19, 12L24, 12L24, 26z" class="Black" id="path2" style="fill: rgb(17, 119, 215);"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-2 -2 32 32" version="1.1" id="svg4" xmlns="http://www.w3.org/2000/svg">
+  <rect x="7.379" y="0.813" width="13.417" height="25.748" style="fill: rgb(222, 222, 222);"/>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32;fill:#ffffff;fill-opacity:1">
+    <g id="Printer" style="fill:#ffffff;fill-opacity:1">
+      <g id="g1" style="fill:#ffffff;fill-opacity:1">
+        <polygon points="10,4 22,4 22,12 24,12 24,2 8,2 8,12 10,12   " class="Black" id="polygon1" style="fill-opacity: 1; fill: rgb(231, 146, 36);"/>
+      </g>
+    </g>
+  </g>
+  <g id="g4" transform="translate(-2, -2.00000095367432)" style="enable-background:new 0 0 32 32;fill:#ffffff;fill-opacity:1">
+    <g id="g3" style="fill:#ffffff;fill-opacity:1">
+      <g id="g2" style="fill:#ffffff;fill-opacity:1">
+        <path d="M28, 10L26, 10L26, 13C26, 13.6 25.6, 14 25, 14L7, 14C6.4, 14 6, 13.6 6, 13L6, 10L4, 10C2.9, 10 2, 10.9 2, 12L2, 24C2, 25.1 2.9, 26 4, 26L8, 26L8, 30L24, 30L24, 26L28, 26C29.1, 26 30, 25.1 30, 24L30, 12C30, 10.9 29.1, 10 28, 10zM22, 24L22, 26L22, 28L10, 28L10, 26L10, 24L10, 20L22, 20L22, 24z" class="Black" id="path1" style="fill-opacity: 1; fill: rgb(17, 119, 215);"/>
+      </g>
+    </g>
+  </g>
+</svg>

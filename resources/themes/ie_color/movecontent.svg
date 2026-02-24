@@ -1,0 +1,6 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashed selection box background -->
+  <rect x="6" y="6" width="20" height="20" fill="rgba(17, 119, 215, 0.1)" stroke="#5b9bd5" stroke-width="1.5" stroke-dasharray="2,2" />
+  <!-- Cardinal arrows (Move) -->
+  <path d="M16 4 v24 M4 16 h24 M16 4 l-4 4 M16 4 l 4 4 M16 28 l-4 -4 M16 28 l 4 -4 M4 16 l 4 -4 M4 16 l 4 4 M28 16 l-4 -4 M28 16 l-4 4" stroke="#1177d7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

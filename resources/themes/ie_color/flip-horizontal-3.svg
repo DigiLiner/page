@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2.9334 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-1.83105477447043E-08, -1.86666733665466)" style="enable-background:new 0 0 32 32">
+    <g transform="matrix(0.933333694934845, 0, 0, 0.933333694934845, 0, 0)">
+      <path d="M16, 6L14, 6L14, 2L16, 2L16, 6zM16, 8L14, 8L14, 12L16, 12L16, 8zM16, 14L14, 14L14, 18L16, 18L16, 14zM16, 20L14, 20L14, 24L16, 24L16, 20zM16, 26L14, 26L14, 30L16, 30L16, 26z" fill="#727272" class="Black" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(0, -1.86666736602783)" style="enable-background:new 0 0 32 32">
+    <g transform="matrix(0.933333694934845, 0, 0, 0.933333694934845, 0, 0)">
+      <g class="st0">
+        <polygon points="10,6 10,26 0,16  " fill="#727272" opacity="0.5" class="Black" />
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(3.63159180949424E-07, -1.86666736602783)" style="enable-background:new 0 0 32 32">
+    <g transform="matrix(0.933333694934845, 0, 0, 0.933333694934845, 0, 0)">
+      <polygon points="20,6 20,26 30,16 " fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+</svg>

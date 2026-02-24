@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs2399" tag="staticElement_id16427647">
+    <linearGradient x1="18.037px" y1="14.511px" x2="18.037px" y2="43.878px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.42222, 0, 0, 0.38297, -3.1322, -1.1011)" id="linearGradient2395">
+      <stop offset="0%" id="stop2266" style="stop-color:#d7e866" />
+      <stop offset="100%" id="stop2268" style="stop-color:#8cab2a" />
+    </linearGradient>
+    <linearGradient x1="34.404px" y1="14.66px" x2="13.759px" y2="46.874px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.35126, 0, 0, 0.34884, -0.99223, -0.37226)" id="linearGradient2392">
+      <stop offset="0%" id="stop4224" style="stop-color:#fff" />
+      <stop offset="100%" id="stop4226" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <g id="svg2397" transform="translate(-2, -2.0024)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M1.5, 14.5L1.5, 1.5L14.5, 8L1.5, 14.5z" fill="url(#linearGradient2395)" id="path3375" stroke="#548820" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2397" transform="translate(-1.99999988079071, -2.00240036010742)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)">
+      <g id="layer1">
+        <path d="M2.5, 12.878L2.5, 3.1L12.341, 8L2.5, 12.878z" fill="none" opacity="0.41" id="path2294" stroke="url(#linearGradient2392)" stroke-linecap="round" />
+      </g>
+    </g>
+  </g>
+</svg>
