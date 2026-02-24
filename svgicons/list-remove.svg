@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2.0025 -10.7525 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs3249" tag="staticElement_id48992040">
+    <linearGradient x1="23.878px" y1="18.765px" x2="23.878px" y2="29.707px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.70965, 0, 0, 0.70537, -8.945, -8.2363)" id="linearGradient2401">
+      <stop offset="0%" id="stop3945" style="stop-color:#e35d4f" />
+      <stop offset="100%" id="stop3947" style="stop-color:#c6262e" />
+    </linearGradient>
+    <linearGradient x1="8px" y1="0%" x2="8px" y2="16.004px" gradientunits="userspaceonuse" spreadmethod="pad" id="linearGradient3190">
+      <stop offset="0%" id="stop3182" style="stop-color:#fff" />
+      <stop offset="100%" id="stop3184" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <g id="svg3247" transform="translate(-0.0024, -8.7524)">
+    <g transform="matrix(1.75000143051147, 0, 0, 1.75000143051147, 0, 0)">
+      <g id="layer1">
+        <path d="M15.5, 5.5L15.5, 10.5L0.5, 10.5L0.5, 5.5L15.5, 5.5z" fill="url(#linearGradient2401)" id="path2262" stroke="#a53738" stroke-linejoin="round" fill-rule="evenodd" />
+      </g>
+    </g>
+  </g>
+  <g id="svg3247" transform="translate(-0.00239992141723633, -8.75240039825439)">
+    <g transform="matrix(1.75000143051147, 0, 0, 1.75000143051147, 0, 0)">
+      <g id="layer1">
+        <path d="M1.5, 6.5L1.5, 9.5L14.5, 9.5L14.5, 6.5L1.5, 6.5z" fill="none" opacity="0.4" id="path3188" stroke="url(#linearGradient3190)" />
+      </g>
+    </g>
+  </g>
+</svg>

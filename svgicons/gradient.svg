@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32mm"
+   height="32mm"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="gradient.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="3.920673"
+     inkscape:cx="139.38934"
+     inkscape:cy="119.49479"
+     inkscape:window-width="1920"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showborder="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.26458333"
+       spacingy="0.26458333"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient6"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#8438a8;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+      <stop
+         style="stop-color:#507dbe;stop-opacity:0.82741117;"
+         offset="1"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6"
+       id="linearGradient7"
+       x1="128.94836"
+       y1="76.98172"
+       x2="366.65533"
+       y2="416.46246"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.06499789,0,0,0.06499789,-0.23159838,-0.16141677)" />
+  </defs>
+  <g
+     inkscape:label="Katman 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       id="path5"
+       style="fill:#ef8946;stroke:#707070;stroke-width:0.264583"
+       cx="183.82686"
+       cy="330.94232"
+       r="0.035955299" />
+    <rect
+       style="vector-effect:non-scaling-stroke;fill:url(#linearGradient7);fill-opacity:1;stroke:none;stroke-width:0.0171973;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0, 0.189171;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:hairline"
+       id="rect6"
+       width="26.45833"
+       height="26.45833"
+       x="2.6458333"
+       y="2.6458333" />
+  </g>
+</svg>

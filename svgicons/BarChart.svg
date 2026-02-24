@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -4 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="BarChart">
+      <rect x="2" y="16" width="8" height="12" rx="0" ry="0" fill="#FFB115" class="Yellow" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="BarChart">
+      <rect x="12" y="10" width="8" height="18" rx="0" ry="0" fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="BarChart">
+      <rect x="22" y="4" width="8" height="24" rx="0" ry="0" fill="#D11C1C" class="Red" />
+    </g>
+  </g>
+</svg>

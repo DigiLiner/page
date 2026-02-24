@@ -1,0 +1,8 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="Scale">
+      <path d="M29, 2L3, 2C2.5, 2 2, 2.5 2, 3L2, 29C2, 29.5 2.5, 30 3, 30L29, 30C29.5, 30 30, 29.5 30, 29L30, 3C30, 2.5 29.5, 2 29, 2zM28, 28L4, 28L4, 4L28, 4L28, 28zM18, 18L6, 18L6, 6L18, 6L18, 18zM26, 18L26, 26L18, 26L21, 23L18, 20L20, 18L23, 21L26, 18z" fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(0, 0)" style="enable-background:new 0 0 496 496">
+    <g transform="matrix(0.875, 0, 0, 0.875, 0, 0)">
+      <g transform="matrix(1.1418, 0, 0, 1.1418, 0, 0)">
+        <g transform="matrix(0.0565, 0, 0, 0.0565, 0, 0)">
+          <path d="M496, 320.8C496, 417.6 417.6, 496 320.8, 496L175.2, 496C78.4, 496 0, 417.6 0, 320.8L0, 175.2C0, 78.4 78.4, 0 175.2, 0L320.8, 0C417.6, 0 496, 78.4 496, 175.2L496, 320.8z" fill="Transparent" fill-opacity="1" class="Transparent" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(0, 0)" style="enable-background:new 0 0 496 496">
+    <g transform="matrix(0.875, 0, 0, 0.875, 0, 0)">
+      <g transform="matrix(1.1418, 0, 0, 1.1418, 0, 0)">
+        <g transform="matrix(0.0565, 0, 0, 0.0565, 0, 0)">
+          <path d="M0, 175.2C0, 78.4 78.4, 0 175.2, 0L320.8, 0C417.6, 0 496, 78.4 496, 175.2L496, 320.8C496, 417.6 417.6, 496 320.8, 496" fill="Transparent" fill-opacity="1" class="Transparent" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(0, 0)" style="enable-background:new 0 0 496 496">
+    <g transform="matrix(0.875, 0, 0, 0.875, 0, 0)">
+      <g transform="matrix(1.1418, 0, 0, 1.1418, 0, 0)">
+        <g transform="matrix(0.0565, 0, 0, 0.0565, 0, 0)">
+          <g>
+            <path d="M320.8, 0C417.6, 0 496, 78.4 496, 175.2L496, 320.8C496, 417.6 417.6, 496 320.8, 496" fill="Transparent" fill-opacity="1" class="Transparent" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(0, 0)" style="enable-background:new 0 0 496 496">
+    <g transform="matrix(0.875, 0, 0, 0.875, 0, 0)">
+      <g transform="matrix(1.1418, 0, 0, 1.1418, 0, 0)">
+        <g transform="matrix(0.0565, 0, 0, 0.0565, 0, 0)">
+          <g>
+            <path d="M340.8, 368L155.2, 368C148.8, 368 143.2, 362.4 143.2, 356C143.2, 349.6 148.8, 344 155.2, 344L340.8, 344C347.2, 344 352.8, 349.6 352.8, 356C352.8, 362.4 347.2, 368 340.8, 368z" fill="#727272" fill-opacity="1" class="Black" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(0, 0)" style="enable-background:new 0 0 496 496">
+    <g transform="matrix(0.875, 0, 0, 0.875, 0, 0)">
+      <g transform="matrix(1.1418, 0, 0, 1.1418, 0, 0)">
+        <g transform="matrix(0.0565, 0, 0, 0.0565, 0, 0)">
+          <path d="M340.8, 352L155.2, 352C148.8, 352 143.2, 346.4 143.2, 340C143.2, 333.6 148.8, 328 155.2, 328L340.8, 328C347.2, 328 352.8, 333.6 352.8, 340C352.8, 346.4 347.2, 352 340.8, 352z" fill="#1177D7" fill-opacity="1" class="Blue" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2.0525 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs3322" tag="staticElement_id25069463">
+    <radialGradient cx="-1.75px" cy="-9.2805px" r="18.657px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(-0.0034338, 0.8576, -0.80521, -0.0032241, -2.4788, 3.4708)" id="radialGradient2848">
+      <stop offset="0%" id="stop3701" style="stop-color:#f8b17e" />
+      <stop offset="26.238%" id="stop3703" style="stop-color:#e35d4f" />
+      <stop offset="74.741%" id="stop3705" style="stop-color:#c6262e" />
+      <stop offset="100%" id="stop3707" style="stop-color:#690b54" />
+    </radialGradient>
+    <linearGradient x1="3.8195px" y1="18.827px" x2="4px" y2="0%" gradientunits="userspaceonuse" spreadmethod="pad" id="linearGradient3697">
+      <stop offset="0%" id="stop2492" style="stop-color:#791235" />
+      <stop offset="100%" id="stop2494" style="stop-color:#dd3b27" />
+    </linearGradient>
+    <linearGradient x1="7.1931px" y1="1.8042px" x2="7.1931px" y2="23.644px" gradientunits="userspaceonuse" spreadmethod="pad" id="linearGradient3715">
+      <stop offset="0%" id="stop4875" style="stop-color:#fff" />
+      <stop offset="100%" id="stop4877" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <g id="svg3320" transform="translate(-0.1356, 0.0132)">
+    <g transform="matrix(1.75137090682983, 0, 0, 1.75137090682983, 0, 0)">
+      <g id="layer1">
+        <path d="M14.519, 14.154L9.5359, 12.423L5.4694, 15.481L4.5205, 11.479L0.5773, 12.481L3.5049, 8.5019L0.8051, 4.5079L4.5676, 4.5392L6.0341, 0.4902L9.3745, 2.7276L14.388, 0.6724L12.405, 5.5985L15.508, 8.1185L12.42, 9.5818L14.519, 14.154z" fill="url(#radialGradient2848)" id="path2160" stroke="url(#linearGradient3697)" stroke-width="0.985px" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </g>
+  </g>
+  <g id="svg3320" transform="translate(-0.135600132751465, 0.0131996490478512)">
+    <g transform="matrix(1.75137090682983, 0, 0, 1.75137090682983, 0, 0)">
+      <g id="layer1">
+        <path d="M7.0001, 3.9996L9.0001, 3.9996L8.44032, 7.9996L7.47153, 7.9996L7.00013, 3.9996z" fill="#fff" id="rect3153" />
+      </g>
+    </g>
+  </g>
+  <g id="svg3320" transform="translate(-0.135600953674317, 0.0131982452392574)">
+    <g transform="matrix(1.75137090682983, 0, 0, 1.75137090682983, 0, 0)">
+      <g id="layer1">
+        <path d="M12.969, 13.547A1.4219 1.4219 0 1 1 10.1252, 13.547A1.4219 1.4219 0 1 1 12.969, 13.547z" fill="#fff" id="path3157" transform="matrix(0.70329, 0, 0, 0.7033, -0.12063, 0.47217)" />
+      </g>
+    </g>
+  </g>
+  <g id="svg3320" transform="translate(-0.13559977645874, 0.0131998512268066)">
+    <g transform="matrix(1.75137090682983, 0, 0, 1.75137090682983, 0, 0)">
+      <g id="layer1">
+        <path d="M9.2188, 3.0938L7.8438, 7.0625A1.2894 1.2894 0 0 1 6.625, 7.9062L4, 7.875L6.25, 11.312A1.2894 1.2894 0 0 1 6.25, 12.7808L4.4375, 15.3118L6.25, 14.8438A1.2894 1.2894 0 0 1 7.8125, 15.81255L8.625, 19.31255L12.4375, 16.37505A1.2894 1.2894 0 0 1 13.6563, 16.18755L17.4373, 17.53055L15.8743, 14.06155A1.2894 1.2894 0 0 1 16.4993, 12.37455L18.8433, 11.24955L16.2493, 9.09335A1.2894 1.2894 0 0 1 15.8743, 7.62455L17.4055, 3.71835L13.5305, 5.34335A1.2894 1.2894 0 0 1 12.3117, 5.21835L9.2179, 3.09335z" fill="none" opacity="0.4" id="path3200" transform="matrix(0.75085, 0, 0, 0.73262, -0.40098, -0.32175)" stroke="url(#linearGradient3715)" stroke-width="1.3276px" stroke-linecap="round" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-3.0775 -2 32 32"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="exit-gray.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="25.21875"
+     inkscape:cx="16"
+     inkscape:cy="15.980173"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     id="Layer_1"
+     transform="translate(-4.3083, -2.15390015258789)"
+     style="enable-background:new 0 0 32 32;fill:#727272;fill-opacity:1">
+    <g
+       transform="matrix(1.0769225358963, 0, 0, 1.0769225358963, 0, 0)"
+       id="g1"
+       style="fill:#727272;fill-opacity:1">
+      <path
+         d="M20, 4.7L20, 9.1C22.4, 10.5 24, 13.1 24, 16C24, 20.4 20.4, 24 16, 24C11.6, 24 8, 20.4 8, 16C8, 13 9.6, 10.5 12, 9.1L12, 4.7C7.3, 6.3 4, 10.8 4, 16C4, 22.6 9.4, 28 16, 28C22.6, 28 28, 22.6 28, 16C28, 10.8 24.7, 6.3 20, 4.7z"
+         fill="#727272"
+         class="Black"
+         id="path1"
+         style="fill:#727272;fill-opacity:1" />
+    </g>
+  </g>
+  <g
+     id="g3"
+     transform="translate(-4.30830144958496, -2.1539)"
+     style="enable-background:new 0 0 32 32;fill:#727272;fill-opacity:1">
+    <g
+       transform="matrix(1.0769225358963, 0, 0, 1.0769225358963, 0, 0)"
+       id="g2"
+       style="fill:#727272;fill-opacity:1">
+      <path
+         d="M17, 14L15, 14C14.4, 14 14, 13.6 14, 13L14, 3C14, 2.4 14.4, 2 15, 2L17, 2C17.6, 2 18, 2.4 18, 3L18, 13C18, 13.6 17.6, 14 17, 14z"
+         fill="#727272"
+         class="Black"
+         id="path2"
+         style="fill:#727272;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

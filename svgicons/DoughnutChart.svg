@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="DoughnutChart">
+      <path d="M19.5, 20.9C18.5, 21.6 17.3, 22 16, 22C14.7, 22 13.5, 21.6 12.5, 20.9L6.8, 26.6C9.3, 28.7 12.5, 30 16, 30C19.5, 30 22.7, 28.7 25.2, 26.6L19.5, 20.9z" fill="#FFB115" class="Yellow" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="DoughnutChart">
+      <path d="M26.6, 6.8L20.9, 12.5C21.6, 13.5 22, 14.7 22, 16C22, 17.3 21.6, 18.5 20.9, 19.5L26.6, 25.2C28.7, 22.7 30, 19.5 30, 16C30, 12.5 28.7, 9.3 26.6, 6.8z" fill="#1177D7" class="Blue" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="DoughnutChart">
+      <path d="M10, 16C10, 12.7 12.7, 10 16, 10C17.3, 10 18.5, 10.4 19.5, 11.1L25.2, 5.4C22.7, 3.3 19.5, 2 16, 2C8.3, 2 2, 8.3 2, 16C2, 19.5 3.3, 22.7 5.4, 25.2L11.1, 19.5C10.4, 18.5 10, 17.3 10, 16z" fill="#D11C1C" class="Red" />
+    </g>
+  </g>
+</svg>
