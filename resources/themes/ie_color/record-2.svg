@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-1.9975 -1.9975 32 32" xmlns="http://www.w3.org/2000/svg" >
+  <defs id="defs2415" tag="staticElement_id32264877">
+    <linearGradient x1="18.379px" y1="44.98px" x2="18.379px" y2="3.0816px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.36857, 0, 0, 0.36857, -0.84577, -0.84577)" id="linearGradient2411">
+      <stop offset="0%" id="stop2492" style="stop-color:#791235" />
+      <stop offset="100%" id="stop2494" style="stop-color:#dd3b27" />
+    </linearGradient>
+    <radialGradient cx="23.896px" cy="3.99px" r="20.397px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0, 0.87966, -1.1611, 0, 12.633, -21.084)" id="radialGradient2409">
+      <stop offset="0%" id="stop3244" style="stop-color:#f8b17e" />
+      <stop offset="26.238%" id="stop3246" style="stop-color:#e35d4f" />
+      <stop offset="66.094%" id="stop3248" style="stop-color:#c6262e" />
+      <stop offset="100%" id="stop3250" style="stop-color:#690b54" />
+    </radialGradient>
+    <linearGradient x1="63.397px" y1="-12.489px" x2="63.397px" y2="5.4676px" gradientunits="userspaceonuse" spreadmethod="pad" gradientTransform="matrix(0.74324, 0, 0, 0.74322, -38.23, 10.609)" id="linearGradient2406">
+      <stop offset="0%" id="stop4875" style="stop-color:#fff" />
+      <stop offset="100%" id="stop4877" style="stop-color:#fff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <g id="svg2413" transform="translate(0.0024, 0.0024)">
+    <g transform="matrix(1.74972379207611, 0, 0, 1.74972379207611, 0, 0)">
+      <g id="layer1">
+        <path d="M8, 0.50183C3.8628, 0.50183 0.5018, 3.86283 0.5018, 8.00003C0.50183, 12.13703 3.8628, 15.49803 8, 15.49803C12.137, 15.49803 15.498, 12.13703 15.498, 8.00003C15.498, 3.86283 12.137, 0.50183 8, 0.50183z" fill="url(#radialGradient2409)" id="path2555" stroke="url(#linearGradient2411)" stroke-width="1.0037px" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </g>
+  </g>
+  <g id="svg2413" transform="translate(0.00239986190795904, 0.00239986190795904)">
+    <g transform="matrix(1.74972379207611, 0, 0, 1.74972379207611, 0, 0)">
+      <g id="layer1">
+        <path d="M14.5, 7.9998C14.5, 11.59 11.59, 14.5 8.0001, 14.5C4.4102, 14.5 1.5, 11.59 1.5, 7.9998C1.5, 4.41 4.4102, 1.5 8.0001, 1.5C11.59, 1.5 14.5, 4.41 14.5, 7.9998z" fill="none" opacity="0.4" id="path2463" stroke="url(#linearGradient2406)" />
+      </g>
+    </g>
+  </g>
+</svg>

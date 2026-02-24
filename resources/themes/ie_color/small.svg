@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg">
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="FullScreenExit">
+      <polygon points="24,8 24,2 20,2 20,12 30,12 30,8  " class="Black" style="fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="FullScreenExit">
+      <polygon points="2,24 8,24 8,30 12,30 12,20 2,20  " class="Black" style="fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="FullScreenExit">
+      <polygon points="8,8 2,8 2,12 12,12 12,2 8,2  " class="Black" style="fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="FullScreenExit">
+      <polygon points="20,30 24,30 24,24 30,24 30,20 20,20  " class="Black" style="fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-2 -2 32 32" version="1.1" id="svg13" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5.571" width="17.05" height="8.624" style="fill: rgb(227, 227, 227);"/>
+  <rect x="4.51" y="12.823" width="19.043" height="11.833" style="fill: rgb(226, 218, 14);"/>
+  <g id="Layer_1" transform="translate(-2, -2)" style="fill:#ffffff;fill-opacity:1">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)" id="g1" style="fill:#ffffff;fill-opacity:1">
+      <rect x="8" y="1" width="3" height="3" rx="0" ry="0" id="rect1" style="fill-opacity: 1; fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+  <g id="g5" transform="translate(-2, -2)">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)" id="g4">
+      <g id="g3">
+        <g id="g2">
+          <path d="M13, 1L12, 1L12, 5L4, 5L4, 1L1, 1L1, 15L15, 15L15, 3L13, 1zM12, 13L4, 13L4, 8L12, 8L12, 13z" id="path1" style="fill: rgb(17, 119, 215);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="g9" transform="translate(-2, -2)" style="fill:#ffffff;fill-opacity:1">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)" id="g8" style="fill:#ffffff;fill-opacity:1">
+      <g id="g7" style="fill:#ffffff;fill-opacity:1">
+        <g id="g6" style="fill:#ffffff;fill-opacity:1">
+          <path d="M13, 1L12, 1L12, 5L4, 5L4, 1L1, 1L1, 15L15, 15L15, 3L13, 1zM12, 13L4, 13L4, 8L12, 8L12, 13z" id="path5" style="fill-opacity: 1; fill: rgb(17, 119, 215);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="g11" transform="translate(-2, -2)" style="fill:#ffffff;fill-opacity:1">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)" id="g10" style="fill:#ffffff;fill-opacity:1">
+      <rect x="5" y="9" width="6" height="1" rx="0" ry="0" id="rect9" style="fill-opacity: 1; fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+  <g id="g13" transform="translate(-2, -2)" style="fill:#ffffff;fill-opacity:1">
+    <g transform="matrix(2, 0, 0, 2, 0, 0)" id="g12" style="fill:#ffffff;fill-opacity:1">
+      <rect x="5" y="11" width="6" height="1" rx="0" ry="0" id="rect11" style="fill-opacity: 1; fill: rgb(17, 119, 215);"/>
+    </g>
+  </g>
+</svg>
