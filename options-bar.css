@@ -1,0 +1,150 @@
+/* Options Bar - Photopea Style Top Toolbar */
+
+.options-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: linear-gradient(to bottom, var(--bg-hover), var(--bg-panel));
+    border-bottom: 1px solid var(--border-light);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 11px;
+    color: var(--text-primary);
+    height: 32px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    overflow: hidden;
+}
+
+/* Action buttons in options bar */
+.options-bar .button {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background 0.15s;
+    width: 24px;
+    height: 24px;
+}
+
+.options-bar .button:hover {
+    background: var(--btn-hover);
+}
+
+.options-bar .button img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0.9);
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.option-group label {
+    color: var(--text-muted);
+    font-size: 11px;
+    min-width: 50px;
+}
+
+.option-group select {
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 2px 20px 2px 6px;
+    font-size: 11px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path fill="%23999" d="M3 5l3 3 3-3z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    min-width: 100px;
+}
+
+.option-group select:hover {
+    border-color: var(--text-muted);
+    background-color: var(--bg-hover);
+}
+
+.option-group select:focus {
+    border-color: #4a9eff;
+}
+
+.option-group input[type="range"] {
+    width: 120px;
+    height: 4px;
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.option-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #4a9eff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.option-group input[type="range"]::-webkit-slider-thumb:hover {
+    background: #6bb3ff;
+}
+
+.option-group input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #4a9eff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.option-group input[type="range"]::-moz-range-thumb:hover {
+    background: #6bb3ff;
+}
+
+.option-value {
+    min-width: 45px;
+    text-align: right;
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.option-separator {
+    width: 1px;
+    height: 20px;
+    background: var(--border-light);
+    margin: 0 4px;
+}
+
+/* Tool-specific options (hidden by default) */
+.tool-option {
+    display: none;
+}
+
+.tool-option.active {
+    display: flex;
+}
+
+.theme-toggle-btn {
+    font-size: 14px;
+}

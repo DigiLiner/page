@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline' https://filedn.com https://unpkg.com https://cdnjs.cloudflare.com;" />
+    <meta name="description"
+        content="HCIE - A powerful online image editor with advanced layer support, professional border filters (Erode, Fade), and vector drawing tools. Edit and design directly in your browser." />
+    <meta name="keywords"
+        content="image editor, online photo editor, layer management, border filter, erode border, fade border, design tool, vector drawing, browser-based editor" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="HCIE Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HCIE - Advanced Online Image Editor" />
+    <meta property="og:description"
+        content="Professional-grade image editing and layered design directly in your browser." />
+
+    <title>HCIE - Advanced Online Image Editor & Layered Design Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="options-bar.css" />
+    <link rel="stylesheet" href="panels.css" />
+    <link rel="stylesheet" href="dialog_handler.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- External Libraries -->
+    <!-- External Libraries -->
+    <!-- UMD Fix for psd.js in Electron -->
+    <!-- psd.js Loading & Bridge -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/psd.js/3.2.0/psd.js"></script>
+    <script>
+        (function () {
+            function sync() {
+                // 1. Check for standard global names
+                if (typeof window.PSD === 'undefined') {
+                    if (typeof window.psd !== 'undefined') window.PSD = window.psd;
+                    else if (typeof psd !== 'undefined') window.PSD = psd;
+                }
+
+                // 2. Check for browserify/bundle require if global PSD is still missing
+                if (typeof window.PSD === 'undefined' && typeof require === 'function') {
+                    try {
+                        window.PSD = require('psd');
+                        console.log("psd.js: Found via global require('psd')");
+                    } catch (e) {
+                        // Not the psd library require
+                    }
+                }
+
+                if (typeof window.PSD !== 'undefined') {
+                    console.log("psd.js: Successfully initialized.");
+                } else {
+                    console.error("psd.js: Could not find PSD global. Library might have failed to load or use a different global name.");
+                }
+            }
+
+            // Try immediately and on load
+            sync();
+            window.addEventListener('load', sync);
+        })();
+    </script>
+
+    <!-- ag-psd for PSD Writing Support (Local + CDN Fallback) -->
+    <script src="ag-psd.js" onerror="
+        console.warn('Local ag-psd.js not found, falling back to CDN');
+        let s = document.createElement('script');
+        s.src = 'https://unpkg.com/ag-psd@30.1.0/dist/bundle.js';
+        document.head.appendChild(s);
+    "></script>
+
+    <script src="global.js"></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/spray.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/flood_fill.js" defer></script>
+    <script src="drawing_canvas.js" defer></script>
+    <script src="history_manager.js" defer></script>
+    <script src="project_io.js" defer></script>
+    <script src="layers.js" defer></script>
+    <script src="document.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/colorbox.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/effects.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/tools.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/filters.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/filter_ui.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="tabs.js" defer></script>
+    <script src="options-bar.js" defer></script>
+    <script src="panels.js" defer></script>
+    <script src="properties-panel.js" defer></script>
+    <script src="new-image.js" defer></script>
+    <script src="dialog_handler.js" defer></script>
+    <script src="filters.js" defer></script>
+    <script src="renderer.js" defer></script>
+    <script src="https://filedn.com/lH29YVrPbvrHFXfYoAX1XS8/ie_scripts/text_tool.js" defer></script>
+    <script src="apps/vector_tools.js" defer></script>
+    <script src="apps/selection_tools.js" defer></script>
+    <script src="apps/clipboard.js" defer></script>
+    <script src="psd_handler.js" defer></script>
+    <script src="erode_border.js" defer></script>
+
+    <div id="appContainer" style="display: flex; flex-direction: column; width: 100%; height: 100vh; overflow: hidden;">
+        <!-- Application Menu Bar (Web only, hidden in Electron) -->
+        <div id="appMenuBar" style="display: none; flex-shrink: 0;">
+            <div class="app-menu-bar">
+                <div class="menu-item">
+                    <span class="menu-label">File</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option" onclick="newCanvas()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/new.svg" class="menu-icon">
+                                <span>New</span>
+                            </div>
+                            <span class="shortcut">Ctrl+N</span>
+                        </div>
+                        <div class="menu-option" onclick="document.getElementById('btn-open').click()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/open.svg" class="menu-icon">
+                                <span>Open</span>
+                            </div>
+                            <span class="shortcut">Ctrl+O</span>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="document.getElementById('btn-save').click()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/saveBlue.svg" class="menu-icon">
+                                <span>Save</span>
+                            </div>
+                            <span class="shortcut">Ctrl+S</span>
+                        </div>
+                        <div class="menu-option" onclick="handleSaveAsFile()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/saveBlue.svg" class="menu-icon">
+                                <span>Save As</span>
+                            </div>
+                            <span class="shortcut">Ctrl+Shift+S</span>
+                        </div>
+                        <div class="menu-option" onclick="handleExportFile()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/file-download-svgrepo-com.svg" class="menu-icon">
+                                <span>Export</span>
+                            </div>
+                            <span class="shortcut">Ctrl+E</span>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/exit.svg" class="menu-icon">
+                                <span>Close</span>
+                            </div>
+                            <span class="shortcut">Ctrl+W</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Edit</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option" onclick="cutSelection()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/cut.svg" class="menu-icon">
+                                <span>Cut</span>
+                            </div>
+                            <span class="shortcut">Ctrl+X</span>
+                        </div>
+                        <div class="menu-option" onclick="copySelection()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/copy.svg" class="menu-icon">
+                                <span>Copy</span>
+                            </div>
+                            <span class="shortcut">Ctrl+C</span>
+                        </div>
+                        <div class="menu-option" onclick="pasteSelection()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/paste.svg" class="menu-icon">
+                                <span>Paste</span>
+                            </div>
+                            <span class="shortcut">Ctrl+V</span>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="undoImage()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/undo.svg" class="menu-icon">
+                                <span>Undo</span>
+                            </div>
+                            <span class="shortcut">Ctrl+Z</span>
+                        </div>
+                        <div class="menu-option" onclick="redoImage()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/redo.svg" class="menu-icon">
+                                <span>Redo</span>
+                            </div>
+                            <span class="shortcut">Ctrl+Y</span>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/cut.svg" class="menu-icon">
+                                <span>Cut</span>
+                            </div>
+                            <span class="shortcut">Ctrl+X</span>
+                        </div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/copy.svg" class="menu-icon">
+                                <span>Copy</span>
+                            </div>
+                            <span class="shortcut">Ctrl+C</span>
+                        </div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/paste.svg" class="menu-icon">
+                                <span>Paste</span>
+                            </div>
+                            <span class="shortcut">Ctrl+V</span>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="clearCanvas()">
+                            <div class="menu-option-content">
+                                <img src="svgicons/delete.svg" class="menu-icon">
+                                <span>Clear All</span>
+                            </div>
+                            <span class="shortcut">Delete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Image</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/flip-horizontal-3.svg" class="menu-icon">
+                                <span>Flip Horizontal</span>
+                            </div>
+                        </div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/flip-vertical-3.svg" class="menu-icon">
+                                <span>Flip Vertical</span>
+                            </div>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="applyFilter('negative')">
+                            <div class="menu-option-content">
+                                <img src="svgicons/invert-colors.svg" class="menu-icon">
+                                <span>Negative / Invert</span>
+                            </div>
+                        </div>
+                        <div class="menu-option" onclick="applyFilter('grayscale')">
+                            <div class="menu-option-content">
+                                <img src="svgicons/BarChart.svg" class="menu-icon">
+                                <span>Grayscale</span>
+                            </div>
+                        </div>
+                        <div class="menu-option" onclick="applyFilter('sepia')">
+                            <div class="menu-option-content">
+                                <img src="svgicons/RatingYellow.svg" class="menu-icon">
+                                <span>Sepia</span>
+                            </div>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/Reload.svg" class="menu-icon">
+                                <span>Rotate</span>
+                            </div>
+                        </div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/crop.svg" class="menu-icon">
+                                <span>Crop</span>
+                            </div>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/icon_scale.svg" class="menu-icon">
+                                <span>Resize Image</span>
+                            </div>
+                        </div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/rectangle.svg" class="menu-icon">
+                                <span>Resize Canvas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Tools</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option" onclick="selectTool(Tool.Pen)">Draw Pen</div>
+                        <div class="menu-option" onclick="selectTool(Tool.Line)">Draw Line</div>
+                        <div class="menu-option" onclick="selectTool(Tool.Rectangle)">Draw Rectangle</div>
+                        <div class="menu-option" onclick="selectTool(Tool.Ellipse)">Draw Ellipse</div>
+                        <div class="menu-option" onclick="selectTool(Tool.Text)">Draw Text</div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="selectTool(Tool.VectorSelect)">Vector Selection</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Filter</span>
+                    <div class="menu-dropdown" style="max-height: 500px; overflow-y: auto;">
+                        <div class="menu-option"><span>Soften</span></div>
+                        <div class="menu-option" onclick="applyFilter('blur')">
+                            <div class="menu-option-content">
+                                <img src="svgicons/blur.svg" class="menu-icon">
+                                <span>Blur</span>
+                            </div>
+                        </div>
+                        <div class="menu-option"><span>Sharpen</span></div>
+                        <div class="menu-option">
+                            <div class="menu-option-content">
+                                <img src="svgicons/theme_palette.svg" class="menu-icon">
+                                <span>Emboss</span>
+                            </div>
+                        </div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option"><span>Edge Detect</span></div>
+                        <div class="menu-option"><span>Add Noise</span></div>
+                        <div class="menu-option" onclick="applyFilter('mosaic')">
+                            <div class="menu-option-content">
+                                <img src="svgicons/pixelate.svg" class="menu-icon">
+                                <span>Mosaic</span>
+                            </div>
+                        </div>
+                        <div class="menu-option"><span>Oil Paint</span></div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="applyFilter('sepia')"><span>Sepia</span></div>
+                        <div class="menu-option" onclick="applyFilter('grayscale')"><span>Grayscale</span></div>
+                        <div class="menu-option"><span>Vignette</span></div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="window.showErodeBorderDialog()">
+                            <div class="menu-option-content">
+                                <span>Erode Border</span>
+                            </div>
+                        </div>
+                        <div class="menu-option" onclick="window.showFadeBorderDialog()">
+                            <div class="menu-option-content">
+                                <span>Fade Border</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Select</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option">All<span class="shortcut">Ctrl+A</span></div>
+                        <div class="menu-option">Deselect<span class="shortcut">Ctrl+D</span></div>
+                        <div class="menu-option">Inverse<span class="shortcut">Ctrl+Shift+I</span></div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option" onclick="selectTool(Tool.Wand)">Magic Wand<span
+                                class="shortcut">W</span></div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">View</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option" onclick="zoomIn()">Zoom In<span class="shortcut">Ctrl++</span>
+                        </div>
+                        <div class="menu-option" onclick="zoomOut()">Zoom Out<span class="shortcut">Ctrl+-</span></div>
+                        <div class="menu-option">Fit Screen<span class="shortcut">Ctrl+0</span></div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">Show Grid</div>
+                        <div class="menu-option">Show Rulers</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-label">Help</span>
+                    <div class="menu-dropdown">
+                        <div class="menu-option">Documentation</div>
+                        <div class="menu-option">Keyboard Shortcuts</div>
+                        <div class="menu-divider"></div>
+                        <div class="menu-option">About</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Options Bar -->
+        <div style="flex-shrink: 0;">
+            <div class="options-bar">
+                <!-- Action Icons (Moved from toolbar) -->
+                <button id="btn-new" onclick="newCanvas()" title="New" class="button">
+                    <img src="resources/themes/ie_color/new.svg" alt="New" />
+                </button>
+                <button id="btn-open" title="Open" class="button">
+                    <img src="resources/themes/ie_color/open.svg" alt="Open" />
+                </button>
+                <button id="btn-save" title="Save" class="button">
+                    <img src="resources/themes/ie_color/save.svg" alt="Save" />
+                </button>
+
+                <div class="option-separator"></div>
+
+                <button id="btn-undo" onclick="undoImage()" title="Undo" class="button">
+                    <img src="resources/themes/ie_color/undo.svg" alt="Undo" />
+                </button>
+                <button id="btn-redo" onclick="redoImage()" title="Redo" class="button">
+                    <img src="resources/themes/ie_color/redo.svg" alt="Redo" />
+                </button>
+
+                <div class="option-separator"></div>
+
+                <button id="btn-zoom-in" onclick="zoomIn()" title="Zoom In" class="button">
+                    <img src="resources/themes/ie_color/zoomin_blue.svg" alt="Zoom In" />
+                </button>
+                <button id="btn-zoom-out" onclick="zoomOut()" title="Zoom Out" class="button">
+                    <img src="resources/themes/ie_color/zoomout_blue.svg" alt="Zoom Out" />
+                </button>
+
+                <div class="option-separator"></div>
+
+                <!-- Blend Mode -->
+                <div class="option-group" data-option="blend">
+                    <label>Blend:</label>
+                    <select id="blendMode">
+                        <option value="normal">Normal</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="screen">Screen</option>
+                        <option value="overlay">Overlay</option>
+                    </select>
+                </div>
+
+                <div class="option-separator"></div>
+
+                <!-- Size (Permanent) -->
+                <div class="option-group" data-option="size">
+                    <label for="sizeSlider">Size:</label>
+                    <input type="range" id="sizeSlider" min="1" max="100" value="2">
+                    <span class="option-value" id="sizeValue">2px</span>
+                </div>
+
+                <div class="option-separator"></div>
+
+                <!-- Opacity (Permanent) -->
+                <div class="option-group" data-option="opacity">
+                    <label for="opacitySlider">Opacity:</label>
+                    <input type="range" id="opacitySlider" min="0" max="100" value="100">
+                    <span class="option-value" id="opacityValue">100%</span>
+                </div>
+
+                <!-- Spacer pushes theme button to far right -->
+                <div style="flex: 1"></div>
+
+                <!-- Theme toggle -->
+                <button id="toggle-dark-mode" title="Toggle Dark/Light Theme" class="button theme-toggle-btn">
+                    🌙
+                </button>
+            </div>
+        </div>
+
+        <!-- Middle Row: Sidebar, and Canvas -->
+        <div id="workspaceRow" style="flex: 1; display: flex; overflow: hidden; width: 100%; min-height: 0;">
+            <!-- Left Toolbox -->
+            <div id="leftToolboxContainer" style="width: 68px; flex-shrink: 0; display: flex; flex-direction: column;">
+                <!-- Tabbed Toolbox -->
+                <div class="tabbed-toolbox">
+                    <!-- Tab Headers -->
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="tools">Tools</button>
+                        <button class="tab-btn" data-tab="filters">Filters</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Tools Tab -->
+                        <div id="tools-tab" class="tab-pane active">
+                            <div class="div-toolbox" id="leftToolbox">
+                                <button id="btn-pen" onclick="selectTool(Tool.Pen)" title="Pen" class="button">
+                                    <img src="resources/themes/ie_color/pen.svg" alt="Pen" />
+                                </button>
+                                <button id="btn-brush" onclick="selectTool(Tool.Brush)" title="Brush" class="button">
+                                    <img src="resources/themes/ie_color/brush.svg" alt="Brush" />
+                                </button>
+
+                                <button id="btn-eraser" onclick="selectTool(Tool.Eraser)" title="Eraser" class="button">
+                                    <img src="resources/themes/ie_color/gui-eraser.svg" alt="Eraser" />
+                                </button>
+
+                                <button id="btn-spray" onclick="selectTool(Tool.Spray)" title="Spray" class="button">
+                                    <img src="resources/themes/ie_color/spray-color.svg" alt="Spray" />
+                                </button>
+
+                                <button id="btn-flood-fill" onclick="selectTool(Tool.Flood_Fill)" title="Flood Fill"
+                                    class="button">
+                                    <img src="resources/themes/ie_color/fill.svg" alt="Flood Fill" />
+                                </button>
+                                <button id="btn-line" onclick="selectTool(Tool.Line)" title="Line" class="button">
+                                    <img alt="Line" src="resources/themes/ie_color/line.svg" />
+                                </button>
+                                <button id="btn-rect" onclick="selectTool(Tool.Rectangle)" title="Rectangle"
+                                    class="button">
+                                    <img src="resources/themes/ie_color/rectangle.svg" alt="Rectangle" />
+                                </button>
+                                <button id="btn-circle" onclick="selectTool(Tool.Circle)" title="Circle" class="button">
+                                    <img alt="Circle" src="resources/themes/ie_color/circle.svg" />
+                                </button>
+                                <button id="btn-eye-dropper" onclick="selectTool(Tool.Eye_Dropper)" title="Eye Dropper"
+                                    class="button">
+                                    <img src="resources/themes/ie_color/eyedropper.svg" alt="Eye Dropper" />
+                                </button>
+                                <button id="btn-text" onclick="selectTool(Tool.Text)" title="Text" class="button">
+                                    <img src="resources/themes/ie_color/text.svg" alt="Text" />
+                                </button>
+                                <button id="btn-wand" onclick="selectTool(Tool.Wand)" title="Wand" class="button">
+                                    <img src="resources/themes/ie_color/wand.svg" alt="Wand" />
+                                </button>
+
+                                <!-- NEW TOOLS -->
+                                <button id="btn-rounded-rect" onclick="selectTool(Tool.Rounded_Rectangle)"
+                                    title="Rounded Rectangle" class="button">
+                                    <img src="resources/themes/ie_color/roundrectangle.svg" alt="Rounded Rect"
+                                        style="border-radius: 4px;" />
+                                </button>
+                                <button id="btn-ellipse" onclick="selectTool(Tool.Ellipse)" title="Ellipse"
+                                    class="button">
+                                    <img src="resources/themes/ie_color/ellipse.svg" alt="Ellipse" />
+                                </button>
+                                <button id="btn-vector-select" onclick="selectTool(Tool.VectorSelect)"
+                                    title="Vector Select" class="button">
+                                    <img src="resources/themes/ie_color/vector-select.svg" alt="Vector Select" />
+                                </button>
+
+                                <!-- 4 NEW REQUESTED BUTTONS (2 Rows) -->
+                                <button id="btn-rect-select" onclick="selectTool(Tool.RectSelect)"
+                                    title="Rectangle Select" class="button">
+                                    <img src="resources/themes/ie_color/selectionrectangle.svg" alt="Rect Select" />
+                                </button>
+                                <button id="btn-ellipse-select" onclick="selectTool(Tool.EllipseSelect)"
+                                    title="Ellipse Select" class="button">
+                                    <img src="resources/themes/ie_color/selectionellipse.svg" alt="Ellipse Select" />
+                                </button>
+                                <button id="btn-poly-select" onclick="selectTool(Tool.PolySelect)"
+                                    title="Polygon Select" class="button">
+                                    <img src="resources/themes/ie_color/selectionpolygon.svg" alt="Poly Select" />
+                                </button>
+                                <button id="btn-lasso" onclick="selectTool(Tool.Lasso)" title="Lasso Select"
+                                    class="button">
+                                    <img src="resources/themes/ie_color/selectionlasso.svg" alt="Lasso" />
+                                </button>
+                                <button id="btn-move-selection" onclick="selectTool(Tool.MoveSelection)"
+                                    title="Move Selection Area" class="button">
+                                    <img src="resources/themes/ie_color/selectiondrag.svg" alt="Move Selection" />
+                                </button>
+                                <button id="btn-move-content" onclick="selectTool(Tool.MoveContent)"
+                                    title="Move Selected Pixels" class="button">
+                                    <img src="resources/themes/ie_color/movecontent.svg" alt="Move Content" />
+                                </button>
+
+                                <button id="btn-crop" onclick="selectTool(Tool.Crop)" title="Crop Tool" class="button">
+                                    <img src="resources/themes/ie_color/crop.svg" alt="Crop" />
+                                </button>
+                                <button id="btn-pan" onclick="selectTool(Tool.Pan)" title="Pan Tool" class="button">
+                                    <img src="resources/themes/ie_color/pan.svg" alt="Pan" />
+                                </button>
+
+
+                                <button onclick="clearCanvas()" class="button" title="Clear Canvas">
+                                    <img src="resources/themes/ie_color/delete.svg" alt="Clear" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Filters Tab -->
+                        <div id="filters-tab" class="tab-pane">
+                            <h3>Image Filters</h3>
+
+                            <button onclick="applyFilterSepia()" class="filter-button" title="Apply Sepia tone">
+                                🎨 Sepia
+                            </button>
+
+                            <div class="filter-control">
+                                <label>
+                                    Blur Radius: <span id="blurRadiusValue">3</span>
+                                </label>
+                                <input type="range" id="blurRadiusSlider" min="1" max="10" value="3"
+                                    oninput="updateBlurValue(this.value)">
+                                <button onclick="applyFilterBlur()" class="filter-button" title="Apply Box Blur">
+                                    ✨ Apply Blur
+                                </button>
+                            </div>
+
+                            <div class="filter-control">
+                                <label>
+                                    Melt Amount: <span id="meltAmountValue">30</span>
+                                </label>
+                                <input type="range" id="meltAmountSlider" min="5" max="100" value="30"
+                                    oninput="updateMeltValue(this.value)">
+                                <button onclick="applyFilterMelt()" class="filter-button" title="Vertical pixel drip">
+                                    💧 Apply Melt
+                                </button>
+                            </div>
+
+                            <div class="filter-control">
+                                <label>
+                                    Shear Amount: <span id="shearAmountValue">40</span>
+                                </label>
+                                <input type="range" id="shearAmountSlider" min="10" max="100" value="40"
+                                    oninput="updateShearValue(this.value)">
+                                <label>
+                                    <input type="checkbox" id="shearHorizontalCheckbox">
+                                    Horizontal
+                                </label>
+                                <button onclick="applyFilterShear()" class="filter-button" title="Directional shear">
+                                    ↔️ Apply Shear
+                                </button>
+                            </div>
+
+                            <div class="filter-control">
+                                <label>
+                                    Mosaic Size: <span id="mosaicSizeValue">10</span>
+                                </label>
+                                <input type="range" id="mosaicSizeSlider" min="2" max="50" value="10"
+                                    oninput="updateMosaicValue(this.value)">
+                                <button onclick="applyFilterMosaic()" class="filter-button" title="Pixelation effect">
+                                    🔲 Apply Mosaic
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Central Canvas Area -->
+            <div id="drawingCanvasContainer" class="drawing-canvas-container"
+                style="flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                <!-- Image Tab Bar -->
+                <div id="imageTabBar" class="image-tab-bar" style="flex-shrink: 0;"></div>
+
+                <!-- Scrollable canvas area -->
+                <div id="canvasScrollArea" class="canvas-scroll-area"
+                    style="flex: 1; overflow: auto; position: relative; background: var(--bg-canvas-area);">
+                    <div id="canvasWrapper" class="drawing-canvas-wrapper" style="position: relative;">
+                        <canvas draggable="false" id="drawingCanvas" class="drawing-canvas"></canvas>
+                        <div id="textToolOverlay" style="display: none; position: absolute; z-index: 100;">
+                            <textarea id="textToolInput"
+                                style="background: transparent; border: 1px dashed var(--text-primary); color: var(--text-primary); font-family: Roboto; font-size: 40px; padding: 0; margin: 0; outline: none; resize: none; overflow: hidden; white-space: pre;"></textarea>
+                        </div>
+                    </div>
+                    <!-- Legacy hidden elements preserved just in case -->
+                    <canvas id="originalCanvas" width="1000" height="600" style="display: none;"></canvas>
+                    <canvas id="zoomCanvas" style="display: none;"></canvas>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div id="rightSidebarContainer"
+                style="width: 250px; flex-shrink: 0; display: flex; flex-direction: column;">
+                <div class="right-sidebar" style="flex: 1; width: 100%;">
+                    <!-- Panel 1: History / Swatches -->
+                    <div id="historyPanel" class="panel expanded">
+                        <div class="panel-header">
+                            <div class="panel-tabs">
+                                <button class="panel-tab active" data-tab="swatches">Swatches</button>
+                                <button class="panel-tab" data-tab="history">History</button>
+                            </div>
+                            <div class="panel-actions">
+                                <button class="panel-btn panel-collapse-btn">▼</button>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <!-- Swatches Tab -->
+                            <div class="panel-pane active" id="swatches-pane">
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <canvas id="colorBoxCanvas" width="112" height="84"></canvas>
+                                    <div class="recent-colors-section">
+                                        <div class="section-title">Recent</div>
+                                        <div id="recentColorsGrid" class="recent-colors-grid"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- History Tab -->
+                            <div class="panel-pane" id="history-pane">
+                                <div class="history-list">
+                                    <div class="history-item">
+                                        <div class="history-item-icon">📝</div>
+                                        <div class="history-item-text">Open</div>
+                                        <div class="history-item-time">now</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-resize"></div>
+                    </div>
+
+                    <!-- Panel 2: Properties -->
+                    <div id="propertiesPanel" class="panel expanded">
+                        <div class="panel-header">
+                            <div class="panel-tabs">
+                                <button class="panel-tab active" data-tab="properties">Properties</button>
+                            </div>
+                            <div class="panel-actions">
+                                <button class="panel-btn panel-collapse-btn">▼</button>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="panel-pane active" id="properties-pane">
+                                <!-- Dynamic Properties Container -->
+                                <div id="dynamic-properties">
+                                    <p style="color: #999; font-size: 11px; text-align: center; padding: 10px;">
+                                        Select a tool to see options
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-resize"></div>
+                    </div>
+
+                    <!-- Panel 3: Layers -->
+                    <div id="layersPanel" class="panel expanded">
+                        <div class="panel-header">
+                            <div class="panel-tabs">
+                                <button class="panel-tab active" data-tab="layers">Layers</button>
+                                <button class="panel-tab" data-tab="channels">Channels</button>
+                                <button class="panel-tab" data-tab="paths">Paths</button>
+                            </div>
+                            <div class="panel-actions">
+                                <button class="panel-btn panel-collapse-btn">▼</button>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="panel-pane active" id="layers-pane">
+                                <div class="layer-controls"
+                                    style="padding: 5px; border-bottom: 1px solid #ddd; display: flex; align-items: center; justify-content: space-between;">
+                                    <span style="font-size: 11px;">Opacity:</span>
+                                    <input type="range" id="layerOpacity" min="0" max="100" value="100"
+                                        style="width: 70%;">
+                                </div>
+                                <div class="layers-list">
+                                    <div class="layer-item selected">
+                                        <span class="layer-icon active" title="Visible">👁</span>
+                                        <div class="layer-thumbnail"></div>
+                                        <div class="layer-name">Background</div>
+                                        <span class="layer-icon" title="Lock">🔒</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-pane" id="channels-pane">
+                                <p style="color: #999; font-size: 11px; text-align: center; padding: 20px;">
+                                    Channels feature coming soon
+                                </p>
+                            </div>
+                            <div class="panel-pane" id="paths-pane">
+                                <p style="color: #999; font-size: 11px; text-align: center; padding: 20px;">
+                                    Paths feature coming soon
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="panel-footer-btn" title="Add Layer">＋</button>
+                            <button class="panel-footer-btn" title="Add Vector Layer"
+                                onclick="addVectorLayer()">V</button>
+                            <button class="panel-footer-btn" title="Delete Layer">🗑️</button>
+                            <button class="panel-footer-btn" title="Move Up">⬆</button>
+                            <button class="panel-footer-btn" title="Move Down">⬇</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div id="statusBar"
+            style="height: 22px; background: var(--bg-surface); border-top: 1px solid var(--border-light); flex-shrink: 0; display: flex; align-items: center; padding: 0 8px;">
+            <div class="status-bar-content"
+                style="display: flex; gap: 12px; align-items: center; width: 100%; font-size: 11px; color: var(--text-secondary); height: 100%; user-select: none;">
+                <span class="unselectable" id="toolName">Pen</span>
+                <span id="statusMessage">Ready</span>
+                <span id="mousePosition">X: 0, Y: 0</span>
+                <span id="zoomDisplay"></span>
+                <span style="flex:1"></span>
+                <span id="filePath">Image 1</span>
+            </div>
+        </div>
+
+        <script>
+            const statusMessage = document.getElementById("statusMessage");
+            const mousePosition = document.getElementById("mousePosition");
+            const drawingCanvas = document.getElementById("drawingCanvas");
+            const toolName = document.getElementById("toolName");
+            drawingCanvas.addEventListener("mousemove", (event) => {
+                const rect = drawingCanvas.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                if (g.drawing) {
+                    statusMessage.innerHTML = "Drawing  ";
+                } else {
+                    statusMessage.innerHTML = "Ready  ";
+                }
+                mousePosition.textContent = `X: ${Math.round(x)}, Y: ${Math.round(
+                    y
+                )}`;
+                toolName.textContent = `Tool: ${g.current_tool}`;
+            });
+
+            function updateStatus(message) {
+                statusMessage.textContent = message;
+            }
+        </script>
+    </div>
+    <!-- New Image Dialog -->
+    <div id="newImageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>New Image</h3>
+                <span class="modal-close" onclick="closeNewImageDialog()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="dialog-row">
+                    <div class="dialog-col">
+                        <label>Preset:</label>
+                        <select id="imagePreset" onchange="applyPreset()">
+                            <option value="custom">Custom</option>
+                            <option value="hd">HD (1280x720)</option>
+                            <option value="fhd">Full HD (1920x1080)</option>
+                            <option value="4k">4K UHD (3840x2160)</option>
+                            <option value="a4">A4 (2480x3508 @ 300dpi)</option>
+                            <option value="square">Square (1024x1024)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dialog-row">
+                    <div class="dialog-col">
+                        <label>Width:</label>
+                        <input type="number" id="newWidth" value="500" min="1" max="10000">
+                    </div>
+                    <div class="dialog-col">
+                        <label>Height:</label>
+                        <input type="number" id="newHeight" value="500" min="1" max="10000">
+                    </div>
+                </div>
+                <div class="dialog-row">
+                    <div class="dialog-col">
+                        <label>Orientation:</label>
+                        <div class="btn-group">
+                            <button id="btn-portrait" onclick="setOrientation('portrait')">Portrait</button>
+                            <button id="btn-landscape" class="btn-active"
+                                onclick="setOrientation('landscape')">Landscape</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-row">
+                    <div class="dialog-col">
+                        <label>Background Color:</label>
+                        <div class="color-picker-row">
+                            <input type="color" id="newBgColor" value="#ffffff">
+                            <label><input type="checkbox" id="transparentBg"> Transparent</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeNewImageDialog()">Cancel</button>
+                <button class="btn-ok" onclick="createNewImage()">Create</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

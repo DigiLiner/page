@@ -1,0 +1,123 @@
+/* Application Menu Bar Styles */
+.app-menu-bar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--bg-hover), var(--bg-panel));
+    border-bottom: 1px solid var(--border-light);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 13px;
+    height: 28px;
+    padding: 0 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.15s;
+}
+
+.menu-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.menu-item:hover>.menu-label {
+    color: #4cc2ff;
+}
+
+.menu-label {
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: color 0.15s;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-panel);
+    min-width: 220px;
+    box-shadow: 0 4px 12px var(--shadow-inset);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px 0;
+    z-index: 10000;
+    margin-top: 2px;
+}
+
+.menu-item:hover>.menu-dropdown {
+    display: block;
+}
+
+.menu-option {
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-primary);
+    transition: background-color 0.1s;
+}
+
+.menu-option-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: var(--icon-filter, none);
+}
+
+.menu-option:hover .menu-icon {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.menu-option:hover {
+    background-color: #0078d7;
+    color: #ffffff;
+}
+
+.menu-option:hover .shortcut {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-divider {
+    height: 1px;
+    background-color: var(--border-light);
+    margin: 4px 10px;
+}
+
+.shortcut {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-left: 20px;
+    font-weight: normal;
+}
+
+/* Dark mode icons need brightness adjustment usually, light mode usually no filter */
+.menu-icon {
+    filter: none;
+}
+
+[data-theme="dark"] .menu-icon {
+    filter: invert(1) brightness(2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .menu-icon {
+        filter: invert(1) brightness(2);
+    }
+}

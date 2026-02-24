@@ -1,0 +1,128 @@
+/* Tabbed Toolbox Styles */
+
+.tabbed-toolbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-surface);
+}
+
+/* Tab Header */
+.tab-header {
+    display: flex;
+    background: linear-gradient(to bottom, var(--bg-hover), var(--bg-panel));
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 6px 2px;
+    background: var(--tab-bg);
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    margin: 2px 1px 0 1px;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 10px;
+    /* Reduced font size further */
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: background-color 0.15s, color 0.15s;
+    outline: none;
+    white-space: normal;
+    /* Allow wrapping if needed */
+    line-height: 1.1;
+    overflow: hidden;
+    text-align: center;
+    min-width: 0;
+}
+
+.tab-btn:hover:not(.active) {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--tab-active);
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--tab-active);
+    margin-bottom: -1px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Tab Content */
+.tab-content {
+    flex: 1;
+    background-color: var(--tab-active);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2px;
+}
+
+.tab-pane {
+    display: none !important;
+}
+
+.tab-pane.active {
+    display: block !important;
+}
+
+/* Tools Tab Content */
+#tools-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Filters Tab Content */
+#filters-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+#filters-tab h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 5px;
+}
+
+/* Filter controls in tab */
+.filter-control {
+    margin-bottom: 15px;
+}
+
+.filter-control label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.filter-control input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.filter-control input[type="checkbox"] {
+    margin-right: 5px;
+}
